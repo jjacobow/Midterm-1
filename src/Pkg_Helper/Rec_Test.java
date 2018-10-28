@@ -8,61 +8,59 @@ import org.junit.jupiter.api.Test;
 class Rec_Test {
 
 	@Test
-	public void RecConstructTest() {
+	public void Rectangle_ConstructTest() {
 		Rectangle r = new Rectangle(2,4);
 		assertEquals(2,r.getiWidth());
 		assertEquals(4,r.getiLength());
 		assertTrue(r instanceof Rectangle);
 	}
 	@Test
-	public void RecGetiWidth() {
+	public void Rectangle_GetiWidth() {
 		Rectangle r =new Rectangle(2,4);
 		assertEquals(2,r.getiWidth());
 	}
 	@Test
-		public void RecSetiWidth() {
+		public void Rectangle_SetiWidth() {
 			Rectangle r = new Rectangle(2,4);
 			r.setiWidth(1);
 			assertEquals(1,r.getiWidth());
 		}
 	@Test 
-	public void RecGetiLength() {
+	public void Rectangle_GetiLength() {
 		Rectangle r = new Rectangle(2,4);
 		assertEquals(4,r.getiLength());
 	}
 	@Test
-	public void RecSetiLength() {
+	public void Rectangle_SetiLength() {
 		Rectangle r = new Rectangle(2,4);
 		r.setiLength(1);
 		assertEquals(1,r.getiLength());
 	}
 	
 	@Test
-	public void RecArea() {
+	public void Rectangle_Area() {
 		Rectangle r = new Rectangle(1,2);
 		assertEquals(2,r.area(),0.05);
 	}
 	@Test
-	public void RecPer() {
+	public void Rectangle_Perimeter() {
 		Rectangle r = new Rectangle(1,2);
 		assertEquals(6,r.perimeter(),.05);
 	}
 	@Test
-	public void RecCompare() {
+	public void Rectangle_Compare() {
 		Rectangle r1 = new Rectangle(1,5);
-		Rectangle r2 = new Rectangle(1,4);
+		Rectangle r2 = new Rectangle(2,4);
 		Rectangle r3 = new Rectangle(1,1);
-		Rectangle r4 = new Rectangle(3,6);
-		Rectangle[] answer = new Rectangle[4];
-		//answer[1] = t6;answer[0]= t3;answer[2]= t4;answer[3]= t1;
-		//answer[4]= t2;answer[5]= t5;
-		ArrayList<Rectangle> recs = new ArrayList<Rectangle>();
-		recs.add(r1);
-		recs.add(r2);
-		recs.add(r3);
-		recs.add(r4);
-		Collections.sort(recs);
-		assertArrayEquals(answer,recs.toArray());
+		Rectangle[] ans = new Rectangle[4];
+		ans[1] = r1;ans[2]=r2;
+		ans[4]= r2;ans[3]= r3;
+		ArrayList<Rectangle> r = new ArrayList<Rectangle>();
+		r.add(r1);
+		r.add(r2);
+		r.add(r3);
+		Collections.sort(r);
+		assertArrayEquals(ans,r.toArray());
 	}
 	
 

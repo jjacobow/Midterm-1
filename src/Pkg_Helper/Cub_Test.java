@@ -52,9 +52,9 @@ public class Cub_Test {
 		}
 		@Test
 		public void Sort_AreaTest() {
-			Cuboid c1 = new Cuboid(1,1,1);
-			Cuboid c2 = new Cuboid(2,2,2);
-			Cuboid c3 = new Cuboid(3,3,3);
+			Cuboid c1 = new Cuboid(1,2,3);
+			Cuboid c2 = new Cuboid(3,2,1);
+			Cuboid c3 = new Cuboid(5,5,5);
 			Cuboid[] ans = new Cuboid[3];
 			ans[0] = c1;ans[1]=c2;ans[2]=c3;
 			ArrayList<Cuboid> cubes = new ArrayList<Cuboid>();
@@ -65,9 +65,9 @@ public class Cub_Test {
 		
 		@Test
 		public void Sort_VolumeTest() {
-			Cuboid c1 = new Cuboid(1,1,1);
-			Cuboid c2 = new Cuboid(2,2,2);
-			Cuboid c3 = new Cuboid(3,3,3);
+			Cuboid c1 = new Cuboid(1,2,3);
+			Cuboid c2 = new Cuboid(3,2,1);
+			Cuboid c3 = new Cuboid(5,5,5);
 			Cuboid[] ans = new Cuboid[3];
 			ans[0] = c1;ans[1]=c2;ans[2]=c3;
 			ArrayList<Cuboid> cubes = new ArrayList<Cuboid>();
