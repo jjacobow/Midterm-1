@@ -12,6 +12,7 @@ public class Rectangle extends Shape implements Comparable<Shape>{
 	public int getiWidth() {
 		return iWidth;
 	}
+	//a comment
 
 	public void setiWidth(int width) {
 		this.iWidth = width;
